@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Manage your Space Explorer account and saved discoveries.">
+  <title>Space Explorer | Account</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body data-page="account">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="site-header" aria-label="Site header"></div>
+
+  <main id="main-content">
+    <section class="page-hero" aria-labelledby="account-title">
+      <div class="container">
+        <p class="eyebrow">YOUR ORBIT</p>
+        <h1 id="account-title">A place for<br><span>your discoveries.</span></h1>
+        <p>Sign in to revisit saved Space Explorer moments, or create an account for your next journey.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="account-section-title">
+      <div class="container">
+        <div class="account-layout">
+          <article class="tool-card account-card" aria-labelledby="account-section-title">
+            <div class="section-heading left">
+              <p class="eyebrow">ACCOUNT ACCESS</p>
+              <h2 id="account-section-title">Continue exploring.</h2>
+              <p id="auth-instructions">Use your email address and a password to sign in. You can switch to account creation below.</p>
+            </div>
+
+            <form id="account-form" novalidate>
+              <div class="form-field">
+                <label for="auth-email">Email address</label>
+                <input id="auth-email" name="email" class="input" type="email" autocomplete="email" inputmode="email" required aria-describedby="auth-email-help">
+                <p id="auth-email-help" class="muted">We’ll use this only for account access.</p>
+              </div>
+
+              <div class="form-field">
+                <label for="auth-password">Password</label>
+                <input id="auth-password" name="password" class="input" type="password" autocomplete="current-password" minlength="8" required aria-describedby="auth-password-help">
+                <p id="auth-password-help" class="muted">Use at least 8 characters. Never reuse a password from another service.</p>
+              </div>
+
+              <div class="button-row">
+                <button id="auth-submit" class="button primary" type="submit">Sign in</button>
+                <button id="auth-mode-toggle" class="button secondary" type="button" aria-pressed="false">Create an account</button>
+              </div>
+              <p id="auth-message" class="form-message" role="status" aria-live="polite">Authentication is unavailable until the site owner connects a frontend-safe, publishable authentication configuration.</p>
+            </form>
+          </article>
+
+          <aside class="detail-panel account-panel" aria-labelledby="account-dashboard-title">
+            <p class="eyebrow">MISSION CONTROL</p>
+            <h2 id="account-dashboard-title">Your dashboard</h2>
+            <div id="account-dashboard">
+              <p class="muted">No account is connected yet. After the site owner connects a supported frontend-safe authentication service, your account details and saved discoveries can appear here.</p>
+              <p class="fallback-note">Empty state: there are no saved discoveries to display.</p>
+              <p><strong>Email</strong><br><span id="account-display-email" class="muted">Not signed in</span></p>
+              <button id="logout-button" class="button secondary" type="button" hidden>Sign out</button>
+            </div>
+          </aside>
+        </div>
+
+        <div class="notice" role="note">
+          <strong>Connection required.</strong> This interface is ready for integration, but authentication is not wired here. The site owner must connect a frontend-safe publishable configuration. Do not place secret keys, service-role keys, or hardcoded credentials in this page.
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer" aria-label="Site footer"></div>
+  <script src="./script.js"></script>
+</body>
+</html>

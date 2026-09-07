@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore the planets of our solar system with Space Explorer.">
+  <title>Space Explorer | Planets</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body data-page="planets">
+  <div class="stars" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <nav class="navbar" aria-label="Primary navigation">
+      <a class="logo" href="index.html"><span aria-hidden="true">✦</span> SPACE EXPLORER</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-menu" aria-label="Open navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-panel" id="primary-menu">
+        <ul class="nav-links">
+          <li><a data-page="home" href="index.html">Home</a></li>
+          <li><a data-page="planets" href="planets.html" aria-current="page">Planets</a></li>
+          <li><a data-page="facts" href="facts.html">Facts</a></li>
+          <li><a data-page="tools" href="tools.html">Tools</a></li>
+          <li><a data-page="quiz" href="quiz.html">Quiz</a></li>
+          <li><a data-page="missions" href="missions.html">Missions</a></li>
+          <li><a data-page="stars" href="stars.html">Stars</a></li>
+          <li><a data-page="contact" href="contact.html">Contact</a></li>
+          <li><a data-page="account" href="account.html">Account</a></li>
+        </ul>
+        <section class="account-panel" aria-labelledby="account-title">
+          <p class="eyebrow" id="account-title">ACCOUNT // MISSION ACCESS</p>
+          <p class="account-state" id="account-state" aria-live="polite">Checking session…</p>
+          <p class="account-email" id="account-email"></p>
+          <div class="account-actions">
+            <a class="button button-secondary" id="sign-in-link" href="account.html">Sign in / create account</a>
+            <button class="button button-secondary" id="logout-button" type="button" hidden>Log out</button>
+          </div>
+        </section>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero reveal" aria-labelledby="page-title">
+      <div class="container">
+        <p class="eyebrow">SOLAR SYSTEM // FIELD GUIDE 01</p>
+        <h1 id="page-title">Our planetary<br><span>neighborhood.</span></h1>
+        <p class="hero-text">Choose a world to inspect its profile, compare its character, and save the destinations you want to revisit.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="explorer-title">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">OBSERVATION DECK</p>
+            <h2 id="explorer-title">Select a world.</h2>
+          </div>
+          <p class="section-note">Eight planets. One star. Endless questions.</p>
+        </div>
+
+        <div class="toolbar panel" role="search" aria-label="Planet search and filters">
+          <label class="search-field" for="planet-search">
+            <span class="eyebrow">SEARCH THE CATALOG</span>
+            <input id="planet-search" class="input" type="search" name="planet-search" placeholder="Search planets…" autocomplete="off">
+          </label>
+          <div class="filter-field">
+            <span class="eyebrow" id="planet-filter-label">FILTER BY TYPE</span>
+            <div class="segmented" role="group" aria-labelledby="planet-filter-label">
+              <button class="chip active" type="button" data-planet-filter="all" aria-pressed="true">All</button>
+              <button class="chip" type="button" data-planet-filter="rocky" aria-pressed="false">Rocky</button>
+              <button class="chip" type="button" data-planet-filter="giant" aria-pressed="false">Giants</button>
+            </div>
+          </div>
+        </div>
+
+        <div id="planet-grid" class="card-grid four" aria-live="polite" aria-label="Planet catalog">
+          <article class="card planet-card" data-planet="mercury" data-type="rocky" tabindex="0">
+            <div class="planet-visual mercury" aria-hidden="true"></div>
+            <div class="card-topline"><span class="eyebrow">01 // ROCKY</span><button class="favorite-button" type="button" data-favorite="mercury" aria-label="Save Mercury to favorites" aria-pressed="false">♡</button></div>
+            <h3>Mercury</h3><p>The swift, cratered world closest to the Sun.</p>
+            <button class="text-link planet-open" type="button" data-planet="mercury">View profile <span aria-hidden="true">→</span></button>
+          </article>
+          <article class="card planet-card" data-planet="venus" data-type="rocky" tabindex="0">
+            <div class="planet-visual venus" aria-hidden="true"></div>
+            <div class="card-topline"><span class="eyebrow">02 // ROCKY</span><button class="favorite-button" type="button" data-favorite="venus" aria-label="Save Venus to favorites" aria-pressed="false">♡</button></div>
+            <h3>Venus</h3><p>A cloud-wrapped world with a runaway greenhouse.</p>
+            <button class="text-link planet-open" type="button" data-planet="venus">View profile <span aria-hidden="true">→</span></button>
+          </article>
+          <article class="card planet-card" data-planet="earth" data-type="rocky" tabindex="0">
+            <div class="planet-visual earth" aria-hidden="true"></div>
+            <div class="card-topline"><span class="eyebrow">03 // ROCKY</span><button class="favorite-button" type="button" data-favorite="earth" aria-label="Save Earth to favorites" aria-pressed="false">♡</button></div>
+            <h3>Earth</h3><p>Our blue home, rich with liquid water and life.</p>
+            <button class="text-link planet-open" type="button" data-planet="earth">View profile <span aria-hidden="true">→</span></button>
+          </article>
+          <article class="card planet-card" data-planet="mars" data-type="rocky" tabindex="0">
+            <div class="planet-visual mars" aria-hidden="true"></div>
+            <div class="card-topline"><span class="eyebrow">04 // ROCKY</span><button class="favorite-button" type="button" data-favorite="mars" aria-label="Save Mars to favorites" aria-pressed="false">♡</button></div>
+            <h3>Mars</h3><p>The red planet, shaped by volcanoes, dust, and ice.</p>
+            <button class="text-link planet-open" type="button" data-planet="mars">View profile <span aria-hidden="true">→</span></button>
+          </article>
+          <article class="card planet-card" data-planet="jupiter" data-type="giant" tabindex="0">
+            <div class="planet-visual jupiter" aria-hidden="true"></div>
+            <div class="card-topline"><span class="eyebrow">05 // GIANT</span><button class="favorite-button" type="button" data-favorite="jupiter" aria-label="Save Jupiter to favorites" aria-pressed="false">♡</button></div>
+            <h3>Jupiter</h3><p>A colossal gas giant with a storm larger than Earth.</p>
+            <button class="text-link planet-open" type="button" data-planet="jupiter">View profile <span aria-hidden="true">→</span></button>
+          </article>
+          <article class="card planet-card" data-planet="saturn" data-type="giant" tabindex="0">
+            <div class="planet-visual saturn" aria-hidden="true"></div>
+            <div class="card-topline"><span class="eyebrow">06 // GIANT</span><button class="favorite-button" type="button" data-favorite="saturn" aria-label="Save Saturn to favorites" aria-pressed="false">♡</button></div>
+            <h3>Saturn</h3><p>A pale giant encircled by the solar system’s icons.</p>
+            <button class="text-link planet-open" type="button" data-planet="saturn">View profile <span aria-hidden="true">→</span></button>
+          </article>
+          <article class="card planet-card" data-planet="uranus" data-type="giant" tabindex="0">
+            <div class="planet-visual uranus" aria-hidden="true"></div>
+            <div class="card-topline"><span class="eyebrow">07 // GIANT</span><button class="favorite-button" type="button" data-favorite="uranus" aria-label="Save Uranus to favorites" aria-pressed="false">♡</button></div>
+            <h3>Uranus</h3><p>An ice giant that rolls through space on its side.</p>
+            <button class="text-link planet-open" type="button" data-planet="uranus">View profile <span aria-hidden="true">→</span></button>
+          </article>
+          <article class="card planet-card" data-planet="neptune" data-type="giant" tabindex="0">
+            <div class="planet-visual neptune" aria-hidden="true"></div>
+            <div class="card-topline"><span class="eyebrow">08 // GIANT</span><button class="favorite-button" type="button" data-favorite="neptune" aria-label="Save Neptune to favorites" aria-pressed="false">♡</button></div>
+            <h3>Neptune</h3><p>A deep-blue ice giant swept by supersonic winds.</p>
+            <button class="text-link planet-open" type="button" data-planet="neptune">View profile <span aria-hidden="true">→</span></button>
+          </article>
+        </div>
+
+        <p id="planet-empty" class="empty-state" hidden>No worlds match that search. Try another name or filter.</p>
+        <aside id="planet-detail" class="detail-panel panel" aria-labelledby="planet-detail-title" aria-live="polite" hidden></aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a class="logo" href="index.html"><span aria-hidden="true">✦</span> SPACE EXPLORER</a>
+      <p>Keep looking up.</p>
+      <p>© 2026 Space Explorer</p>
+    </div>
+  </footer>
+
+  <script src="./script.js" defer></script>
+</body>
+</html>

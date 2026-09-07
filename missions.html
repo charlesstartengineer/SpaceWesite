@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore fictional educational space missions to the Moon, Mars, and Europa.">
+  <title>Space Explorer | Missions</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body data-page="missions">
+  <div id="site-header"></div>
+
+  <main>
+    <section class="page-hero" aria-labelledby="missions-title">
+      <div class="container">
+        <p class="eyebrow">MISSION CONTROL</p>
+        <h1>Choose a course<br><span>for wonder.</span></h1>
+        <p>Plan fictional journeys across the solar system, track your progress, and imagine what it takes to reach another world.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="simulation-notice-title">
+      <div class="container">
+        <aside class="notice-card" role="note">
+          <p class="eyebrow">PLEASE NOTE</p>
+          <h2 id="simulation-notice-title">These missions are fictional simulations.</h2>
+          <p>All mission names, countdowns, statuses, and schedules on this page are created for education and storytelling. They are not real launch schedules, agency announcements, or operational guidance.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="mission-board-title">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">THE MISSION BOARD</p>
+          <h2 id="mission-board-title">Three worlds. Infinite questions.</h2>
+          <p>Read the objectives, check the fictional launch window, and imagine the science that could happen there.</p>
+        </div>
+
+        <div class="card-grid three">
+          <article class="feature-card mission-card" data-mission="luna" data-mission-date="2031-07-18T14:00:00Z" aria-labelledby="luna-title">
+            <div class="mission-card-top"><span class="card-icon" aria-hidden="true">◐</span><span class="badge">READY TO IMAGINE</span></div>
+            <h3 id="luna-title">Luna Surveyor</h3>
+            <p class="muted">Destination: The Moon</p>
+            <p>Map a permanently shadowed crater and study the icy materials hidden near the lunar south pole.</p>
+            <h4>Mission objectives</h4>
+            <ul><li>Analyze regolith samples.</li><li>Chart sunlight and shadow.</li><li>Test a compact rover route.</li></ul>
+            <div class="mission-meta"><span class="mission-status">Status: Systems check</span><span class="mission-countdown" id="countdown-luna" role="timer" aria-live="polite" aria-label="Luna Surveyor fictional countdown">Countdown loading…</span></div>
+            <noscript><p class="fallback-text">JavaScript is off. The Luna Surveyor fictional launch window is July 18, 2031.</p></noscript>
+          </article>
+
+          <article class="feature-card mission-card" data-mission="ares" data-mission-date="2034-03-21T09:30:00Z" aria-labelledby="ares-title">
+            <div class="mission-card-top"><span class="card-icon" aria-hidden="true">●</span><span class="badge">LONG-RANGE</span></div>
+            <h3 id="ares-title">Ares Pathfinder</h3>
+            <p class="muted">Destination: Mars</p>
+            <p>Follow an ancient river channel to investigate how water may have shaped the Red Planet’s surface.</p>
+            <h4>Mission objectives</h4>
+            <ul><li>Capture layered rock images.</li><li>Compare soil chemistry.</li><li>Log weather across a Martian season.</li></ul>
+            <div class="mission-meta"><span class="mission-status">Status: Route planning</span><span class="mission-countdown" id="countdown-ares" role="timer" aria-live="polite" aria-label="Ares Pathfinder fictional countdown">Countdown loading…</span></div>
+            <noscript><p class="fallback-text">JavaScript is off. The Ares Pathfinder fictional launch window is March 21, 2034.</p></noscript>
+          </article>
+
+          <article class="feature-card mission-card" data-mission="europa" data-mission-date="2038-11-02T18:45:00Z" aria-labelledby="europa-title">
+            <div class="mission-card-top"><span class="card-icon" aria-hidden="true">✦</span><span class="badge">DEEP SPACE</span></div>
+            <h3 id="europa-title">Europa Lantern</h3>
+            <p class="muted">Destination: Europa</p>
+            <p>Study the bright moon’s cracked ice and search for clues about the ocean believed to lie beneath its shell.</p>
+            <h4>Mission objectives</h4>
+            <ul><li>Measure the ice surface.</li><li>Listen for magnetic signals.</li><li>Identify promising plume zones.</li></ul>
+            <div class="mission-meta"><span class="mission-status">Status: Science review</span><span class="mission-countdown" id="countdown-europa" role="timer" aria-live="polite" aria-label="Europa Lantern fictional countdown">Countdown loading…</span></div>
+            <noscript><p class="fallback-text">JavaScript is off. The Europa Lantern fictional launch window is November 2, 2038.</p></noscript>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section tinted" aria-labelledby="progress-title">
+      <div class="container split">
+        <div>
+          <p class="eyebrow">EXPLORER LOG</p>
+          <h2 id="progress-title">Your fictional flight plan.</h2>
+          <p>Every destination adds a new question to your logbook. Use the mission board as a starting point for research, sketches, and stories.</p>
+        </div>
+        <div class="quote-card mission-progress" aria-label="Fictional mission progress">
+          <div class="progress-line"><span>Mission badges</span><strong>3 of 3</strong></div>
+          <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="3" aria-valuenow="3" aria-label="Three fictional mission badges collected"><span style="width:100%"></span></div>
+          <p class="badge-row"><span class="badge">LUNA</span><span class="badge">ARES</span><span class="badge">EUROPA</span></p>
+          <p class="muted">Badges are fictional story milestones for learning and exploration.</p>
+          <noscript><p class="fallback-text">JavaScript is off. Your three fictional mission badges remain visible.</p></noscript>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="./script.js"></script>
+</body>
+</html>

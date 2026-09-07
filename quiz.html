@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Test your astronomy knowledge with the Space Explorer quiz.">
+  <title>Space Explorer | Quiz</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body data-page="quiz">
+  <div class="stars" aria-hidden="true"></div>
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Primary navigation">
+      <a class="logo" href="./index.html"><span aria-hidden="true">✦</span> SPACE EXPLORER</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-menu" aria-label="Open navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-panel" id="primary-menu">
+        <ul class="nav-links">
+          <li><a data-page="home" href="./index.html">Home</a></li>
+          <li><a data-page="planets" href="./planets.html">Planets</a></li>
+          <li><a data-page="facts" href="./facts.html">Facts</a></li>
+          <li><a data-page="tools" href="./tools.html">Tools</a></li>
+          <li><a data-page="stars" href="./stars.html">Stars</a></li>
+          <li><a data-page="quiz" href="./quiz.html" aria-current="page">Quiz</a></li>
+          <li><a data-page="missions" href="./missions.html">Missions</a></li>
+          <li><a data-page="contact" href="./contact.html">Contact</a></li>
+        </ul>
+        <div class="account-panel" aria-label="Account controls">
+          <p class="eyebrow">ACCOUNT // MISSION ACCESS</p>
+          <p class="account-state" id="account-state" aria-live="polite">Checking session…</p>
+          <p class="account-email" id="account-email"></p>
+          <div class="account-actions">
+            <a class="button button-secondary" id="sign-in-link" href="./account.html">Sign in / create account</a>
+            <button class="button button-secondary" id="logout-button" type="button" hidden>Log out</button>
+          </div>
+          <button class="button button-secondary" id="theme-toggle" type="button" aria-pressed="false">Toggle theme</button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero" aria-labelledby="quiz-title">
+      <div class="container">
+        <p class="eyebrow">CHECK YOUR ORBIT</p>
+        <h1 id="quiz-title">Space quiz.<br><span>Instant feedback.</span></h1>
+        <p>Answer five questions, learn from every choice, and see your score at the end.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="quiz-heading">
+      <div class="container quiz-wrap">
+        <h2 id="quiz-heading" class="sr-only">Astronomy knowledge quiz</h2>
+        <div class="progress-line" aria-label="Quiz status">
+          <span id="quiz-progress">Question 1 of 5</span>
+          <span id="quiz-score" aria-live="polite">Score 0</span>
+        </div>
+        <progress id="quiz-progress-meter" max="5" value="1" aria-label="Quiz progress">1 of 5</progress>
+
+        <div id="quiz-card" class="quiz-card" tabindex="-1">
+          <p class="eyebrow">QUESTION 1</p>
+          <h3>Which planet is known as the Red Planet?</h3>
+          <fieldset>
+            <legend class="sr-only">Choose an answer</legend>
+            <label><input type="radio" name="quiz-answer" value="Mars"> Mars</label>
+            <label><input type="radio" name="quiz-answer" value="Venus"> Venus</label>
+            <label><input type="radio" name="quiz-answer" value="Jupiter"> Jupiter</label>
+            <label><input type="radio" name="quiz-answer" value="Mercury"> Mercury</label>
+          </fieldset>
+          <details class="quiz-explanation">
+            <summary>Explanation</summary>
+            <p>Mars appears reddish because iron minerals in its surface have oxidized, or rusted.</p>
+          </details>
+        </div>
+
+        <p class="noscript-note">JavaScript is disabled, so the starter question and all five questions remain available below.</p>
+        <ol class="quiz-fallback" aria-label="All quiz questions">
+          <li><strong>Which planet is known as the Red Planet?</strong> Mars, Venus, Jupiter, or Mercury. <em>Answer: Mars. Its iron-rich surface gives it a reddish appearance.</em></li>
+          <li><strong>What is the largest planet in our solar system?</strong> Earth, Saturn, Jupiter, or Neptune. <em>Answer: Jupiter.</em></li>
+          <li><strong>What galaxy contains our solar system?</strong> Andromeda, the Milky Way, Whirlpool, or Sombrero. <em>Answer: The Milky Way.</em></li>
+          <li><strong>What force keeps planets in orbit around the Sun?</strong> Magnetism, friction, gravity, or pressure. <em>Answer: Gravity.</em></li>
+          <li><strong>What is a light-year a measure of?</strong> Time, brightness, mass, or distance. <em>Answer: Distance—the distance light travels in one year.</em></li>
+        </ol>
+
+        <button id="quiz-next" class="button button-primary" type="button">Next question <span aria-hidden="true">→</span></button>
+        <section id="quiz-result" class="detail-panel" aria-live="polite" hidden aria-labelledby="result-title">
+          <h2 id="result-title">Mission result</h2>
+          <p>Your final score will appear here.</p>
+          <button id="quiz-restart" class="button button-secondary" type="button">Restart quiz</button>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a class="logo" href="./index.html"><span aria-hidden="true">✦</span> SPACE EXPLORER</a>
+      <p>Keep looking up.</p>
+      <p>© 2026 Space Explorer</p>
+    </div>
+  </footer>
+  <script src="./script.js" defer></script>
+</body>
+</html>

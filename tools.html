@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Interactive Space Explorer tools for comparing planets and visualizing solar-system scale.">
+  <title>Space Explorer | Tools</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body data-page="tools">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="site-header" aria-label="Site header"></div>
+
+  <main id="main-content">
+    <section class="page-hero" aria-labelledby="tools-title">
+      <div class="container">
+        <p class="eyebrow">THE TOOLKIT</p>
+        <h1 id="tools-title">Make the<br><span>numbers click.</span></h1>
+        <p>Put planetary facts in motion. Compare worlds, map their distances, and test what your weight would feel like beyond Earth.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="interactive-tools-title">
+      <div class="container tool-stack">
+        <h2 id="interactive-tools-title" class="sr-only">Interactive space tools</h2>
+
+        <article class="tool-card" aria-labelledby="face-off-title">
+          <div class="section-heading left">
+            <p class="eyebrow">COMPARISON</p>
+            <h2 id="face-off-title">Planet face-off</h2>
+            <p>Choose two planets to compare their size, day length, year length, and gravity. The comparison is a quick way to notice patterns across our planetary neighborhood.</p>
+          </div>
+          <div class="compare-controls">
+            <label for="compare-a">First planet
+              <select id="compare-a" name="compare-a">
+                <option value="mercury">Mercury</option>
+                <option value="venus">Venus</option>
+                <option value="earth" selected>Earth</option>
+                <option value="mars">Mars</option>
+                <option value="jupiter">Jupiter</option>
+                <option value="saturn">Saturn</option>
+                <option value="uranus">Uranus</option>
+                <option value="neptune">Neptune</option>
+              </select>
+            </label>
+            <label for="compare-b">Second planet
+              <select id="compare-b" name="compare-b">
+                <option value="mercury">Mercury</option>
+                <option value="venus">Venus</option>
+                <option value="earth">Earth</option>
+                <option value="mars" selected>Mars</option>
+                <option value="jupiter">Jupiter</option>
+                <option value="saturn">Saturn</option>
+                <option value="uranus">Uranus</option>
+                <option value="neptune">Neptune</option>
+              </select>
+            </label>
+          </div>
+          <div id="comparison-output" class="comparison-grid" aria-live="polite" aria-atomic="true">
+            <div class="comparison-card"><h3>Earth</h3><p>Our home world.</p><dl><dt>Diameter</dt><dd>12,742 km</dd><dt>Day</dt><dd>24 hours</dd><dt>Year</dt><dd>365 days</dd><dt>Gravity</dt><dd>1.00 g</dd></dl></div>
+            <div class="comparison-card"><h3>Mars</h3><p>The red planet.</p><dl><dt>Diameter</dt><dd>6,779 km</dd><dt>Day</dt><dd>24.6 hours</dd><dt>Year</dt><dd>687 days</dd><dt>Gravity</dt><dd>0.38 g</dd></dl></div>
+            <p class="comparison-explanation">Earth is larger and has stronger surface gravity, while Mars takes nearly twice as long to orbit the Sun.</p>
+          </div>
+          <noscript><p class="fallback-note">JavaScript is disabled, so the starter Earth–Mars comparison is shown. Enable JavaScript to select other planets.</p></noscript>
+        </article>
+
+        <article class="tool-card" aria-labelledby="scale-title">
+          <div class="section-heading left">
+            <p class="eyebrow">SCALE MODEL</p>
+            <h2 id="scale-title">A walk through space</h2>
+            <p>Drag the slider to change the model width. The planets remain in orbital order, while their spacing is compressed into a readable visual map.</p>
+          </div>
+          <div class="range-row">
+            <label for="scale-slider">Model width</label>
+            <output id="scale-output" for="scale-slider">720</output><span aria-hidden="true"> km</span>
+          </div>
+          <input id="scale-slider" name="scale-slider" type="range" min="280" max="1200" value="720" step="20" aria-describedby="scale-help">
+          <p id="scale-help" class="muted">A larger width spreads the model farther apart. Distances are illustrative and not to scale with planet sizes.</p>
+          <div id="scale-model" class="scale-model" role="img" aria-label="Solar system scale model from the Sun to Neptune">
+            <div class="scale-orbit"><span class="scale-body sun">Sun</span><span class="scale-body mercury">Mercury</span><span class="scale-body venus">Venus</span><span class="scale-body earth">Earth</span><span class="scale-body mars">Mars</span><span class="scale-body jupiter">Jupiter</span><span class="scale-body saturn">Saturn</span><span class="scale-body uranus">Uranus</span><span class="scale-body neptune">Neptune</span></div>
+          </div>
+          <p class="fallback-note">Reading the model: every planet travels around the Sun, but the outer planets are separated by much larger gaps than this compact display can show.</p>
+        </article>
+
+        <article class="tool-card" aria-labelledby="weight-title">
+          <div class="section-heading left">
+            <p class="eyebrow">GRAVITY CHECK</p>
+            <h2 id="weight-title">What would you weigh?</h2>
+            <p>Enter your Earth weight to estimate how heavy you would feel on another world. Your mass would stay the same; gravity changes the force you feel.</p>
+          </div>
+          <div class="weight-controls">
+            <label for="weight-input">Earth weight
+              <input id="weight-input" name="weight-input" class="input" type="number" min="1" max="1000" step="1" value="100" inputmode="decimal" aria-describedby="weight-help">
+            </label>
+            <span aria-hidden="true">lb</span>
+          </div>
+          <p id="weight-help" class="muted">Use a number between 1 and 1,000 pounds.</p>
+          <div id="weight-output" class="weight-output" aria-live="polite" aria-atomic="true">On Mars, you would feel about 38 lb.</div>
+          <noscript><p class="fallback-note">JavaScript is disabled, so the example uses a 100 lb Earth weight and Mars gravity.</p></noscript>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer" aria-label="Site footer"></div>
+  <script src="./script.js"></script>
+</body>
+</html>

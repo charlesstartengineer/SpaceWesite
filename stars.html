@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore simplified educational maps of four well-known constellations with Space Explorer.">
+  <title>Space Explorer | Stars</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body data-page="stars">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="site-header" aria-label="Site header">
+    <header class="site-header">
+      <nav class="navbar container" aria-label="Primary navigation">
+        <a class="logo" href="./index.html"><span aria-hidden="true">✦</span> SPACE EXPLORER</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-menu" aria-label="Open navigation menu"><span></span><span></span><span></span></button>
+        <div class="nav-panel" id="primary-menu">
+          <ul class="nav-links">
+            <li><a data-page="home" href="./index.html">Home</a></li>
+            <li><a data-page="planets" href="./planets.html">Planets</a></li>
+            <li><a data-page="facts" href="./facts.html">Facts</a></li>
+            <li><a data-page="tools" href="./tools.html">Tools</a></li>
+            <li><a data-page="stars" aria-current="page" href="./stars.html">Stars</a></li>
+            <li><a data-page="quiz" href="./quiz.html">Quiz</a></li>
+            <li><a data-page="missions" href="./missions.html">Missions</a></li>
+            <li><a data-page="contact" href="./contact.html">Contact</a></li>
+          </ul>
+          <section class="account-panel" aria-labelledby="account-title">
+            <p class="eyebrow" id="account-title">ACCOUNT // MISSION ACCESS</p>
+            <p class="account-state" id="account-state" aria-live="polite">Checking session…</p>
+            <p class="account-email" id="account-email"></p>
+            <div class="account-actions">
+              <a class="button button-secondary" id="sign-in-link" href="./account.html">Sign in / create account</a>
+              <button class="button button-secondary" id="logout-button" type="button" hidden>Log out</button>
+            </div>
+          </section>
+        </div>
+      </nav>
+    </header>
+  </div>
+
+  <main id="main-content">
+    <section class="page-hero" aria-labelledby="stars-title">
+      <div class="container">
+        <p class="eyebrow">NIGHT SKY // STAR MAPS</p>
+        <h1 id="stars-title">Find the<br><span>patterns in starlight.</span></h1>
+        <p>Meet four recognizable constellations and learn how people use imagined lines to organize the night sky.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="viewer-title">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">CONSTELLATION VIEWER</p>
+          <h2 id="viewer-title">Choose a sky pattern</h2>
+          <p>Select a constellation to highlight its simplified star pattern and read a quick guide. This educational map is not a live sky chart, and it does not show the exact position of stars tonight.</p>
+        </div>
+
+        <div class="stars-layout">
+          <aside class="tool-card constellation-menu" aria-labelledby="constellation-menu-title">
+            <h3 id="constellation-menu-title">Constellations</h3>
+            <div id="constellation-buttons" class="button-stack" role="group" aria-label="Choose a constellation">
+              <button class="chip active" type="button" data-constellation="orion" aria-pressed="true">Orion</button>
+              <button class="chip" type="button" data-constellation="ursa-major" aria-pressed="false">Ursa Major</button>
+              <button class="chip" type="button" data-constellation="cassiopeia" aria-pressed="false">Cassiopeia</button>
+              <button class="chip" type="button" data-constellation="lyra" aria-pressed="false">Lyra</button>
+            </div>
+            <p class="muted">Tip: The connecting lines are guides humans draw between stars; they are not physical lines in space.</p>
+          </aside>
+
+          <div class="star-viewer tool-card">
+            <div id="star-map" class="star-map" role="img" aria-label="Simplified educational star map showing Orion. Select another constellation to change this description." tabindex="0">
+              <span class="map-label map-label-one" aria-hidden="true">★</span><span class="map-label map-label-two" aria-hidden="true">★</span><span class="map-label map-label-three" aria-hidden="true">★</span><span class="map-label map-label-four" aria-hidden="true">★</span><span class="map-label map-label-five" aria-hidden="true">★</span><span class="map-label map-label-six" aria-hidden="true">★</span><span class="map-label map-label-seven" aria-hidden="true">★</span>
+              <span class="star-line line-one" aria-hidden="true"></span><span class="star-line line-two" aria-hidden="true"></span><span class="star-line line-three" aria-hidden="true"></span><span class="star-line line-four" aria-hidden="true"></span>
+              <span class="map-caption" aria-hidden="true">EDUCATIONAL SIMPLIFICATION</span>
+            </div>
+            <p class="map-note"><strong>Map note:</strong> This is a simplified representation for learning. It is not a live sky chart, a navigation aid, or a scale model of star distances.</p>
+          </div>
+
+          <article id="constellation-info" class="detail-panel" aria-live="polite" aria-atomic="true" aria-labelledby="constellation-info-title">
+            <p class="eyebrow">CURRENT GUIDE</p>
+            <h3 id="constellation-info-title">Orion</h3>
+            <p class="info-summary">The Hunter is easy to recognize because of the three bright stars in Orion’s Belt.</p>
+            <dl>
+              <div><dt>Look for</dt><dd>Three evenly spaced belt stars with bright stars above and below.</dd></div>
+              <div><dt>Known for</dt><dd>Orion’s Belt and the Orion Nebula, a star-forming region in the sword.</dd></div>
+              <div><dt>Remember</dt><dd>Constellations are apparent patterns seen from Earth; their stars can be very far apart in space.</dd></div>
+            </dl>
+          </article>
+        </div>
+
+        <noscript>
+          <section class="fallback-note" aria-labelledby="fallback-title">
+            <h3 id="fallback-title">Constellation guides</h3>
+            <p>JavaScript is disabled, so the complete reference guides are listed below. The map above remains a simplified educational representation, not a live sky chart.</p>
+            <article><h4>Orion</h4><p>Known as the Hunter, Orion is recognized by Orion’s Belt: three bright stars in a row. The Orion Nebula lies in the sword below the belt.</p></article>
+            <article><h4>Ursa Major</h4><p>The Great Bear contains the Big Dipper, a familiar seven-star pattern. The two stars at the end of the Dipper’s bowl point toward Polaris, the North Star.</p></article>
+            <article><h4>Cassiopeia</h4><p>Cassiopeia is often recognized by its W or M shape. Its appearance changes with the season and with how it is oriented in the sky.</p></article>
+            <article><h4>Lyra</h4><p>Lyra is a small constellation marked by Vega, one of the bright stars in Earth’s night sky. Vega forms part of the Summer Triangle.</p></article>
+          </section>
+        </noscript>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer" aria-label="Site footer">
+    <footer class="footer"><div class="container footer-inner"><a class="logo" href="./index.html"><span aria-hidden="true">✦</span> SPACE EXPLORER</a><p>Keep looking up.</p><p>© 2026 Space Explorer</p></div></footer>
+  </div>
+
+  <script src="./script.js" defer></script>
+</body>
+</html>

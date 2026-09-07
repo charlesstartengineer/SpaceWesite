@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A searchable library of reliable astronomy facts from NASA and ESA educational resources.">
+  <title>Space Explorer | Facts</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body data-page="facts">
+  <div class="stars" aria-hidden="true"></div>
+  <header class="site-header">
+    <nav class="navbar" aria-label="Primary navigation">
+      <a class="logo" href="./index.html"><span aria-hidden="true">✦</span> SPACE EXPLORER</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-menu" aria-label="Open navigation menu"><span></span><span></span><span></span></button>
+      <div class="nav-panel" id="primary-menu">
+        <ul class="nav-links">
+          <li><a data-page="home" href="./index.html">Home</a></li>
+          <li><a data-page="planets" href="./planets.html">Planets</a></li>
+          <li><a data-page="facts" href="./facts.html" aria-current="page">Facts</a></li>
+          <li><a data-page="tools" href="./tools.html">Tools</a></li>
+          <li><a data-page="stars" href="./stars.html">Stars</a></li>
+          <li><a data-page="quiz" href="./quiz.html">Quiz</a></li>
+          <li><a data-page="missions" href="./missions.html">Missions</a></li>
+          <li><a data-page="contact" href="./contact.html">Contact</a></li>
+        </ul>
+        <section class="account-panel" aria-labelledby="account-title">
+          <p class="eyebrow" id="account-title">ACCOUNT // MISSION ACCESS</p>
+          <p class="account-state" id="account-state" aria-live="polite">Checking session…</p>
+          <p class="account-email" id="account-email"></p>
+          <div class="account-actions">
+            <a class="button button-secondary" id="sign-in-link" href="./account.html">Sign in / create account</a>
+            <button class="button button-secondary" id="logout-button" type="button" hidden>Log out</button>
+          </div>
+        </section>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero" aria-labelledby="facts-title">
+      <div class="container">
+        <p class="eyebrow">FIELD NOTES // 03</p>
+        <h1 id="facts-title">Small facts.<br><span>Huge universe.</span></h1>
+        <p>Search a growing collection of astronomy facts grounded in NASA and ESA educational resources.</p>
+        <div class="hero-actions" aria-label="Fact tools">
+          <button class="button button-primary" id="random-fact" type="button">Surprise me <span aria-hidden="true">✦</span></button>
+          <button class="button button-secondary" id="theme-toggle" type="button" aria-label="Toggle color theme">Toggle theme</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="library-title">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">THE ARCHIVE</p>
+          <h2 id="library-title">Astronomy fact library</h2>
+        </div>
+        <div class="toolbar">
+          <label class="sr-only" for="fact-search">Search astronomy facts</label>
+          <input id="fact-search" class="input" type="search" placeholder="Try “Mars”, “light”, or “Moon”…" autocomplete="off">
+          <span id="fact-count" class="muted" aria-live="polite">8 facts</span>
+        </div>
+
+        <div id="fact-grid" class="card-grid three" aria-live="polite">
+          <article class="card fact-card" data-fact data-search="light year distance astronomy" tabindex="0">
+            <p class="eyebrow">DISTANCE</p><h3>A light-year measures distance.</h3>
+            <p>A light-year is the distance light travels in one year—not a measure of time. It is about 9.46 trillion kilometers.</p>
+            <p class="card-source">NASA Science</p>
+          </article>
+          <article class="card fact-card" data-fact data-search="sun star solar system hydrogen energy" tabindex="0">
+            <p class="eyebrow">OUR STAR</p><h3>The Sun is a star.</h3>
+            <p>The Sun is the star at the center of our solar system. Its energy comes from nuclear fusion in its hot core.</p>
+            <p class="card-source">NASA Solar System Exploration</p>
+          </article>
+          <article class="card fact-card" data-fact data-search="moon earth orbit phases gravity" tabindex="0">
+            <p class="eyebrow">EARTH’S MOON</p><h3>The Moon is tidally locked.</h3>
+            <p>The Moon rotates once in about the same time it takes to orbit Earth, so we generally see the same lunar hemisphere.</p>
+            <p class="card-source">NASA Science</p>
+          </article>
+          <article class="card fact-card" data-fact data-search="mars red planet iron oxide atmosphere rover" tabindex="0">
+            <p class="eyebrow">MARS</p><h3>Mars looks red because of rust.</h3>
+            <p>Iron minerals in Martian rocks and dust oxidize, or rust, giving the planet its distinctive reddish appearance.</p>
+            <p class="card-source">NASA Solar System Exploration</p>
+          </article>
+          <article class="card fact-card" data-fact data-search="venus rotation day atmosphere planet" tabindex="0">
+            <p class="eyebrow">VENUS</p><h3>A day on Venus is very long.</h3>
+            <p>Venus rotates so slowly that one rotation takes longer than one trip around the Sun: about 243 Earth days.</p>
+            <p class="card-source">NASA Solar System Exploration</p>
+          </article>
+          <article class="card fact-card" data-fact data-search="jupiter largest planet great red spot storm gas giant" tabindex="0">
+            <p class="eyebrow">JUPITER</p><h3>Jupiter is the largest planet.</h3>
+            <p>Jupiter is a gas giant and the biggest planet in our solar system. Its Great Red Spot is a long-lived storm.</p>
+            <p class="card-source">NASA Solar System Exploration</p>
+          </article>
+          <article class="card fact-card" data-fact data-search="saturn rings ice rock planet" tabindex="0">
+            <p class="eyebrow">SATURN</p><h3>Saturn’s rings are mostly ice.</h3>
+            <p>Saturn’s bright rings are made mainly of chunks of water ice, with smaller amounts of rocky material and dust.</p>
+            <p class="card-source">NASA Solar System Exploration</p>
+          </article>
+          <article class="card fact-card" data-fact data-search="exoplanet stars planets milky way esa" tabindex="0">
+            <p class="eyebrow">BEYOND</p><h3>Planets orbit other stars.</h3>
+            <p>Exoplanets are planets beyond our solar system. Thousands have been confirmed, showing that planetary systems are common.</p>
+            <p class="card-source">ESA Education</p>
+          </article>
+        </div>
+        <div id="fact-empty" class="empty-state" hidden role="status">
+          <h3>No facts found.</h3>
+          <p>Try a broader search, such as “planet,” “star,” or “Moon.”</p>
+        </div>
+        <p class="source-note">Sources: <a href="https://science.nasa.gov/solar-system/" target="_blank" rel="noopener noreferrer">NASA Solar System Exploration</a>, <a href="https://science.nasa.gov/" target="_blank" rel="noopener noreferrer">NASA Science</a>, and <a href="https://www.esa.int/kids/en/learn" target="_blank" rel="noopener noreferrer">ESA Education</a>. Facts are concise learning summaries; visit the linked agencies for full context.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a class="logo" href="./index.html"><span aria-hidden="true">✦</span> SPACE EXPLORER</a>
+      <p>Keep looking up.</p>
+      <p>© 2026 Space Explorer</p>
+    </div>
+  </footer>
+
+  <script src="./script.js" defer></script>
+</body>
+</html>
